@@ -1,0 +1,69 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.custom-bg-color {
+  background-color: #607274;
+  border: 1px solid white;
+  color: white;
+}
+
+.custom-bg-color:hover {
+  background-color: #faeed1;
+}
+
+.custom-bg-color2 {
+  background-color: black;
+  border: 1px solid grey;
+  color: white;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 43vh;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://img.freepik.com/photos-gratuite/suite-hotel-luxe-moderne-literie-confortable-lampe-electrique-lumineuse-decor-elegant-genere-par-ai_24640-100557.jpg?w=1380&t=st=1703233628~exp=1703234228~hmac=22467010c8244884f357ebbdcd4e98f0967a09bd355718a6c63f745d7b7502ba");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-title {
+  margin: 0;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espace de marge */
+}
+
+.icon-container a {
+  color: #607274;
+  font-size: 30px; /* Taille de police */
+}
+
+.fa-brands {
+  font-size: 48px; /* Taille des icônes */
+  margin: 0 20px; /* Espacement horizontal entre les icônes */
+  color: #607274; /* Couleur des icônes */
+}

@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="card" style="width: 25rem;">
+        <%= image_tag "#{@room.photo}",
+                      class: "card-img-top img-fluid img-size",
+                      style: "height: 20rem;" %>
+        <div class="card-body">
+          <h4 class="card-title mb-3"><%= @room.hotel.name %></h4>
+          <p class="card-title">Capacité : <%= @room.capacity %> personnes</p>
+          <p class="card-title">Adresse : <%= @room.hotel.address %></p>
+          <h5 class="card-title mt-2"><%= @room.price_per_night %>€ / nuit</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="border p-4">
+        <h1 class="mb-4">Complétez votre réservation</h1>
+
+        <%= simple_form_for [@room, @booking] do |f| %>
+          <div class="row mb-3">
+            <div class="form-group">
+            <%= f.label :date_range, "Choisir les dates" %>
+            <%= f.input :date_range, as: :string, label: false, input_html: { class: "form-control", data: { controller: "datepicker" } } %>
+          </div>
+          <div class="row">
+            <div class="col">
+              <%= f.submit "Je réserve cette chambre", class: "btn btn-light custom-bg-color" %>
+              <%= link_to "Retour", rooms_path, class: "btn btn-dark ms-2" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
